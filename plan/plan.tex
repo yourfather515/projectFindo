@@ -48,15 +48,17 @@ A typical usage of FInDO will be similar to what follows. The user will select o
 
 \subsection{User Stories}
 
-1.FInDO should be able to identify and collect the correct storage unit. We intend for the robot to identify which items are being kept in each unit, or allow the users to add the items manually. This will allow the robot to collect the correct storage unit given an item name. 
+1.FInDO should be able to identify and collect the correct storage unit. The robot needs to associate items with given storage units and be able to retrieve the correct storage unit when needed.
 
-2. The robot should be able to navigate its way around the flat to get to the destination. We intend for the robot to have a mapped version of the flat/house/space it is operating in. With that, the robot should be able to make autonomous decisions on how to get from one place to another. This is useful for the user as this is what makes the robot capable of bringing the items to the user.
+2. The robot should be able to navigate its way around the home to get to the destination. We intend for the robot to have a mapped version of the flat/house/space it is operating in. With that, the robot should be able to make autonomous decisions on how to get from one place to another. This is useful for the user as this is what makes the robot capable of bringing the items to the user.
 
 3. FInDO should be able to bring storage units to multiple specified locations throughout the home. This gives the user flexibility to be in multiple places in the home rather than having to be in a specific location to have items brought to them. 
 
 4. The robot should be controllable by a mobile/web application. We intend for there to be a mobile/web application that would be used as a way to remotely control the robot. The user should be able to specify a location where they are located and an object they would like to access and have the correct unit brought to them.
 
 5. The robot should have voice activation. We intend for the robot to be activated by voice if the user does not have their phone with them. Saying the words “Fido, fetch me item name to destination!” would activate the robot which would then identify the item in question and take it to the destination.
+
+6. The robot should be able to identify objects placed in storage units so that they can be associated with them. This helps users as they do not have to input the items manually, which would be very inconvinient for many people and be a long process.
 
 \section{Task planning}
 %In this section you must provide a detailed plan of the tasks to be completed to achieve your goals. The plan must comprise two levels: first a few milestones that correspond to major achievements in the project, then a detailed list of atomic tasks that must be achieved.
@@ -182,12 +184,29 @@ Total & 200 \\ \hline
 \vskip -3mm
 \end{table*}
 
-Please see Table 2 for resource distribution
+Please see Table 2 for time resource distribution
 
-Equipment: Turtlebot, Lego Mindstorms EV3, Lego, 3D printer, Wood, Motors, Raspberry Pi, Arduino, Shelving components. 
+Equipment: 
+\begin{itemize}
+\item Turtlebot
+\item Lego Mindstorms EV3
+\item Lego
+\item 3D printer
+\item Wood/Shelving components 
+\item Motors
+\item Raspberry Pi
+\item Arduino
+\item Shelving components
+\end{itemize}
 
-Skills: Front end web development experience, Database experience, Python, Java, c++ experience. 
-
+Skills: 
+\begin{itemize}
+\item Front end web development experience
+\item Database experience
+\item Python
+\item Java
+\item C++
+\end{itemize}
 \subsection{Risk assessment} 
 
 Lack of Hardware Experience
