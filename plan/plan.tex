@@ -4,6 +4,7 @@
 %%  https://2017.icml.cc/Conferences/2017/StyleAuthorInstructions
 
 \documentclass{article}
+\usepackage{pdfpages}
 \input{mlp2018_includes}
 
 %% You probably do not need to change anything above this comment
@@ -13,6 +14,7 @@
 \setGroupName{ENRS}
 \setProductName{FInDO}
 \setLogoFileName{figs/logo.png}
+
 
 \begin{document} 
 
@@ -149,15 +151,19 @@ Identify items on trays & Image Recognition & March 30 & Cubby imp. Tray imp. Fo
 \vskip -3mm
 \end{table*}
 
-%\begin{figure}[tb]
-%\vskip 5mm
-%\begin{center}
-%\centerline{\includegraphics[width=\columnwidth]{figs/crane}}
-%\caption{Lego construction: highlight any salient features in the caption}
-%\label{fig:sample-fig}
-%\end{center}
-%\vskip -5mm
-%\end{figure} 
+\begin{figure*}
+\vskip 3mm
+\begin{center}
+\begin{small}
+\begin{sc}
+\centerline{\includegraphics[width=\paperwidth]{figs/Gantt.pdf}}
+\caption{Gantt chart for main milestones}
+\label{Gantt Chart}
+\end{sc}
+\end{small}
+\end{center}
+\vskip -3mm
+\end{figure*} 
 
 
 \subsection{Resource distribution}
@@ -251,6 +257,8 @@ We will be tracking progress using Jira, we will be asking members of the team t
 %% Include any references in a bibliography
 
 \bibliography{example-refs}
+
+
 
 \end{document} 
 
