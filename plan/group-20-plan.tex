@@ -29,13 +29,13 @@
 \begin{abstract} 
 %The abstract should first consist of one sentence describing the intended functionality of your system. It should be followed by a few sentences (100--200 words) summarising the main milestones that will bring your project to a successful completion. This should give the reader a clear expectation of what will be achieved throughout the semester.
 
-For those with reduced mobility moving around the home can be a challenge. We want to help in this regard by allowing peoples possesions to come to them, not the other way around.
-To help with this issue FInDO will be able to deliver them preselected everyday items on trays to locations around the house. 
-The robot will be able to map out the layout of the house and navigate back and forth from the tray cubbies to the user. 
-The user will be able to save delivery locations and FInDO will be able to navigate to those locations with tray in hand (or paw). 
-It will be capable of  storing and retrieving trays in the cubbies. Using image recognition, 
-FInDO will be able to figure out what is in each of the trays for more intuitive instructing. 
-Lastly, it will have an easy to use interface to control this functionality in the form of both an app and support for voice commands.
+For those with reduced mobility, moving around the home can be a challenge. 
+We want to develop a system which can help in such cases by bringing a person's possesions to them, not the other way around. 
+FInDO will be the home assistant that can deliver collections of everyday items to different locations around the home. 
+These items can be stored out-of-the-way on trays in the paired shelving unit somewhere in the house, and FInDO will be able to autonomously collect and deposit trays at this unit. 
+After being installed, FInDO will map out the layout of the house, and thenceforth be able to navigate between the user's locations and the tray cubbies. 
+Using image recognition, FInDO will be able to figure out what is in each of the trays, so that users can request an item without having to remember which tray it is in. 
+Lastly, the human-interfacing components will be easy-to-use and accessible, comprising an app and voice commands.
 
 \end{abstract} 
 
@@ -46,15 +46,15 @@ For people living with reduced mobility moving around the home to get items can 
 \subsection{Relevance of the system} 
 %If possible you should then provide evidence that the problem is relevant, by referencing published research that demonstrates a need and / or characterizes a potential market for your system. If appropriate, include reference to existing systems that you are taking as inspiration. You should cite the sources (e.g. \cite{Newell81}) and add the details to the example-refs.bib file so that the full references appears in the bibliography section.
 
-In 2011/12 6.5 million people in Great Britain had some level of impairment to their mobility \cite{disabilitystats}. This shows a large need for such a system, and with the population in the UK aging \cite{agegrowth} this need will increase in the coming years.
+In 2011/12 6.5 million people in Great Britain were living with some level of impairment to their mobility \cite{disabilitystats}, and at the moment there is an aging population within the UK \cite{agegrowth}. It can be seen that there is need for a robot like FInDO, and such need can only increase in the coming years. 
 
-We have determined that an App is an appropriate interaction mechanism based on internet usage in the targeted age groups. In 2018 80.2\% of 60-75 year olds had recently used the internet and 43.6\% of those aged over 75 years old had recently done so \cite{webage}. This shows that our choice of using an App to control the robot should be accessible to a large portion of our target market while also retaining the flexibility an App brings.
+We have determined that an app is an appropriate controller for the end user, based on internet usage statistics among the targeted age groups. In 2018 80.2\% of 60-75 year olds had recently used the internet and 43.6\% of those aged over 75 years old had recently done so \cite{webage}. This shows that our choice of using a webapp-like interface to control the robot should be familiar to a large portion of our target market. 
 
 \subsection{High-level description} 
 %You should then provide the description of your problem in terms of functionalities. A common approach in the software industry is to rely on user stories. Internet is full on resources on the topic and you should investigate it.
-A typical usage of FInDO will be similar to what follows. The user will select on the app what storage unit they would like to access, and where in the home they are located. 
-FInDO will proceed to move to the relevant storage unit, and pick it up. 
-The storage unit will then be  brought to the user at a user specified location. The storage unit will remain in that location as needed. When the user wishes for the storage unit to be returned FInDO will proceed to pick up the unit again and take it back to the  storage area.
+A typical usage of FInDO will be similar to what follows: the user will select on the app which tray of items they would like delivered, and where in the home they are located; 
+FInDO will proceed to move to the relevant storage unit, and pick up the specified tray from it; the tray will then be brought to the user's location. 
+FInDO, with the tray, will remain in that location for as long as needed, and when the user wishes they can dismiss FInDO and FInDO will carry the tray back to the storage unit, and return it into its place.
 
 \begin{figure}[tb]
 \vskip 3mm
