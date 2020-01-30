@@ -1,0 +1,6 @@
+ROS version is kinetic
+tf_transform has been setup but needs to be adjusted
+
+I don't think we have to setup the Sensor, Odometry or Base Controller ourselves
+
+Need to work out the names to invoke for those things 
