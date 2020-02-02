@@ -78,7 +78,13 @@ To keep your folders clean, it is often a good idea to keep your images in a sep
 
 \subsection{User interface}
 
-Depending on your system and its stage of development, it could be useful to include a section about the user interface design, and the usability decisions behind it. Note, however, that you will be asked to provide a separate 'user guide' for the final demo.
+We have managed to create a basic Android application for calling upon the turtlebot. We chose to make an HTTP server written in python to run on the turtlebot, which is listening for HTTP requests. The android application, which is written in Java, is able to post these requests upon clicking a button.
+
+The application currently has two buttons in its home screen - one for calling FInDO to take items from a user and one for calling FInDO to fetch selected items. The second button opens a new screen which then has two drop down menus. The first one has the list of the possible items and the second one has a list of the possible rooms. Once these are selected, the user can call FInDO to fetch the selected item to the selected room. However, this is currently strictly a UI thing - since the turtlebot cannot currently map the room or know its location, all the buttons that call FInDO will do is send an HTTP POST request to the server running on the turtlebot, which will then in turn activate the default python script to move the bot. 
+
+The drop down menus are currently populated with hardcoded lists of items. In the future, we expect these to be changed dynamically upon user input.
+
+Once FInDO is called and an HTTP request is sent to the server, the application will display a loading bar until FInDO has finished moving - that is, until a response has come back from the server. In order to not freeze the UI while the robot is moving, we built upon the Android AsyncTask class, which is designed as a helper class around Threads and Handlers. It is used to asynchronously perform background operations while keeping the UI active.
 
 \subsection{Software}
 
@@ -151,4 +157,5 @@ of your system.
 \bibliography{example-refs}
 
 \end{document} 
+
 
