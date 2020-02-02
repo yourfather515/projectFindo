@@ -13,7 +13,7 @@
 \setGroupName{ERNS}
 \setProductName{FInDO}
 \setDemoNumber{2}
-\setLogoFileName{figs/logo.png}
+\setLogoFileName{../../assets/logo.png}
 
 \begin{document} 
 
@@ -40,9 +40,10 @@ This section should start with your goals:
     \item Tray Design - ??
 \end{itemize}
 
-We have encountered issues with the mapping of the house environment, this is due to problems we have faced with the SLAM abilities of the TurtleBots. 
-It appears currently that we will not be able to automate the mapping process using ROS, so we are instead going to manually draw up the maps of the demo room.
-The issue with the mapping software is due to the control software requiring a specific version of Ubuntu, which has proved infeasible to run in a virtual machine on DICE.
+We have encountered issues with the mapping of the house environment. This is due to a few different technical problems: a lack of certain mapping libraries installed on the TurtleBot, an inability to use ROS efficiently on DICE machines, and deeply unclear documentation online regarding TurtleBots and ROS mapping. We spent a lot of time trying to get mapping to work but on the advice of experts we've decided to drop the idea indefinitely.
+Instead of automatically mapping a room and localising within it, we will have the robot save routes that the user guides it on using arrow keys on the app. We anticipate difficulties with localisation and error correction but intend to mitigate them as they arise. We considered manually inputting a map matrix of a demo room/area, but decided that as no user could be expected to accurately map out their house in such a manner.
+
+
 
 %Concisely summarise the reasons for any deviations from achievement of your intended goals.
 
@@ -54,11 +55,11 @@ The issue with the mapping software is due to the control software requiring a s
 
 \section{Technical details}
 
-This section should describe in technical terms the current status of your system implementation. It should provide clear justification for any design decisions, with brief reference to any alternatives considered or explored. If your implementation is based on the work of others (e.g. you have found a specific vision processing algorithm) you should cite the source (e.g. \cite{Newell81}) and add the details to the example-refs.bib file so that the full reference appears in the bibliography section. Note you can also refer back to your own previous reports. 
+% This section should describe in technical terms the current status of your system implementation. It should provide clear justification for any design decisions, with brief reference to any alternatives considered or explored. If your implementation is based on the work of others (e.g. you have found a specific vision processing algorithm) you should cite the source (e.g. \cite{Newell81}) and add the details to the example-refs.bib file so that the full reference appears in the bibliography section. Note you can also refer back to your own previous reports. 
 
-You can export references in the bibtex format from Google Scholar. Click the quotation marks underneath the study name, click 'Bibtex' in the new popup. You can then copy and paste this code into example-refs.bib.
+% You can export references in the bibtex format from Google Scholar. Click the quotation marks underneath the study name, click 'Bibtex' in the new popup. You can then copy and paste this code into example-refs.bib.
 
-The following are some suggested subsections. You might also want to include a system overview diagram showing how all the relevant parts connect. 
+% The following are some suggested subsections. You might also want to include a system overview diagram showing how all the relevant parts connect. 
 
 \subsection{Hardware}
 
