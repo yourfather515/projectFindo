@@ -9,11 +9,11 @@
 %% You probably do not need to change anything above this comment
 
 %% REPLACE the details in the following commands with your details
-\setGroupNumber{1}
-\setGroupName{My Group}
-\setProductName{My Product}
+\setGroupNumber{20}
+\setGroupName{ERNS}
+\setProductName{FInDO}
 \setDemoNumber{2}
-\setLogoFileName{figs/sdp_logo_placeholder.png}
+\setLogoFileName{figs/logo.png}
 
 \begin{document} 
 
@@ -29,26 +29,28 @@
 The abstract should consist of one sentence describing the intended functionality of your system, followed by a few sentences (100--200 words) summarising the key advances made for this demo. This should give the reader a clear expectation of what will be demonstrated.
 \end{abstract} 
 
-\section*{Introduction}
-\label{sec:intro}
-This document provides a template for the SDP demo report.  This template structures the report into sections, which you are required to use. You can change the subsection headings if you wish. In this template the text in each section will include an outline of what you should include in each section, along with some practical LaTeX examples (for example figures, tables, algorithms).  Your document should be no longer than \textbf{four pages}. 
-
-You should delete this introduction section (no introduction is required).
 
 \section{Project plan update} 
 
 This section should start with your goals:
 \begin{itemize}
-    \item List each of the goals you had set for this demo, appended with "achieved", "partly achieved" "not achieved"
+    \item Mapping House - Not achieved
+    \item Forklift Design - Achieved 
+    \item Cubby Design - ??
+    \item Tray Design - ??
 \end{itemize}
 
-Concisely summarise the reasons for any deviations from achievement of your intended goals.
+We have encountered issues with the mapping of the hosue enviroment, this is due to problems we have faced with the SLAM abilities of the turtlebots. 
+It appears currently that we will not be able to automate the mapping process using ROS, so we are instead going to manually draw up the maps of the demo room.
+The issue with the mapping software is due to the control software requiring a specific version of Ubuntu, which has proved infeasible to run in a virtual machine on DICE.
 
-Provide a one paragraph description of how your group organised the work towards the goals, including specific indication of which group member worked on which aspect(s). Highlight any methods used to ensure effective group work such as protocols for code integration, task tracking, automated testing, etc.
+%Concisely summarise the reasons for any deviations from achievement of your intended goals.
 
-Provide a summary of how your budget has been spent so far.
+%Provide a one paragraph description of how your group organised the work towards the goals, including specific indication of which group member worked on which aspect(s). Highlight any methods used to ensure effective group work such as protocols for code integration, task tracking, automated testing, etc.
 
-Provide a clear statement of any modification (relative to your original plan) that you wish to make to your goals for the next demonstration.
+%Provide a summary of how your budget has been spent so far.
+
+%Provide a clear statement of any modification (relative to your original plan) that you wish to make to your goals for the next demonstration.
 
 \section{Technical details}
 
@@ -143,25 +145,13 @@ If you need a figure or table to stretch across two columns use the \verb+figure
 Each report should contain an actualization of the estimated total budget 
 of your system.
 
-\section*{Submission}
-This section is to be deleted.
 
-The document should be submitted electronically by one group member using the submit command: 
-\begin{verbatim}
-submit sdp CDemX [filename] 
-\end{verbatim}
+%submit sdp CDemX [filename] 
 
-where \verb|X| is the number of the demonstration (between 1 and 4) and \verb|[filename]| is the name of your file. The filename must be  \verb|group-[g]-demoX.pdf| where \verb|[g]| is the group number and again  \verb|X| is the demo number.
-This document should be submitted by a group member nominated for this purpose, and also emailed to the group mentor and to the TA at the time of submission.
+%where \verb|X| is the number of the demonstration (between 1 and 4) and \verb|[filename]| is the name of your file. The filename must be  \verb|group-[g]-demoX.pdf| where \verb|[g]| is the group number and again  \verb|X| is the demo number.
+%This document should be submitted by a group member nominated for this purpose, and also emailed to the group mentor and to the TA at the time of submission.
 
 
-\subsection*{User guide}
-Along with the final demo report, you should submit a user guide for your system. There is no template for the user guide.
-
-The document should be submitted electronically by one group member using the submit command: 
-\begin{verbatim}
-submit sdp UG [filename] 
-\end{verbatim}
 
 where \verb|[filename]| is the name of your user guide file. The filename must be  \verb|group-[g]-userguide.pdf| where \verb|[g]| is the group number.
 
