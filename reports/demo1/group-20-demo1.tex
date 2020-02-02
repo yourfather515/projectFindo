@@ -13,7 +13,7 @@
 \setGroupName{ERNS}
 \setProductName{FInDO}
 \setDemoNumber{2}
-\setLogoFileName{../../assets/logo.png}
+\setLogoFileName{figs/logo.png}
 
 \begin{document} 
 
@@ -87,52 +87,72 @@ Depending on your system and its stage of development, it could be useful to inc
 
 %If you present algorithms, you can use the \verb+algorithm+ and \verb+algorithmic+ environments to format pseudocode (for instance, Algorithm~\ref{alg:example}). These require the corresponding style files, \verb+algorithm.sty+ and \verb+algorithmic.sty+ which are supplied with this package. 
 
-Turtlebot movement is currently using a method based upon predefined paths which it is able to follow.
-We have created a series of functions which can make the turtlebot move in either a straight line for a given distance or rotate by a given angle.
-To ensure that the turtlebot has executed the move correctly we are using odometry data to determine when the move has been completed. 
-To gather odomoter feedback we are using the ROS odom topic, as this has already been implemented for the turtlebot and has so far proved fairly accurate.
-In future we will use the turtlebots measured speed and LIDAR data to increase accuracy.
-We are currently using predefined paths to allow us to test that the movement of the turtlebot is working as expected. In future we expect to be able to generate these paths based on a predefined map, and a given start and finish location.
+TurtleBot movement is currently using a method based upon predefined paths which it is able to follow.
+We have created a series of functions which can make the TurtleBot move in either a straight line for a given distance or rotate by a given angle.
+To ensure that the TurtleBot has executed the move correctly we are using optometry data to determine when the move has been completed. 
+To gather odometer feedback we are using the ROS odom topic, as this has already been implemented for the TurtleBot and has so far proved fairly accurate.
+In future we will use the TurtleBots measured speed and LIDAR data to increase accuracy.
+We are currently using predefined paths to allow us to test that the movement of the TurtleBot is working as expected. In future we expect to be able to generate these paths based on a predefined map, and a given start and finish location.
 
 We considered using the ROS navigation stack, however it was proving difficult to implement due to a lack of the control software on DICE and missing libraries on the TurtleBot. 
 Based on this, and the advice of one of the SDP experts we have decided to use our own navigation implementation.
 
 \section{Evaluation}
 
-This section should first outline any testing methods you used (e.g. repeated runs of subsystems, data-logging, naive user testing). 
-
-It should then present relevant quantitative results. If you are using graphs, please make sure they are properly labelled and logically illustrate the point you want to make (e.g. to compare two algorithms).
-
-At an absolute minimum, this section should provide a table (for instance, table~\ref{tab:sample-table}, using the \verb+table+ environment) of success rates for repeated runs of the whole system (as you will only be able to show one run in the demo).
+We tested our hardware subsystem by repeatedly lifting a static load on the forklift to test reliability. As the forklift is currently a demo out of LEGO, testing was not intensive and we didn't calculate the max load bearing.
+Software was tested by having an Android app emulator activate a script on the TurtleBot while both were connected to the "SDProbots" network.
 
 \begin{table}[h]
-\vskip 3mm
-\begin{center}
-\begin{small}
-\begin{sc}
-\begin{tabular}{lcccr}
-\hline
-\abovespace\belowspace
-Test  & Time(mins) & Errors & Success \\
-\hline
-\abovespace
-1    & 1:30 & 0 & $\surd$ \\
-2    & 3:00 & 2 & $\times$\\
-3    & 2:20 & 1 & $\surd$ \\
-4    & 1:50 & 1 & $\times$\\
-\belowspace
-5    & 2:10 & 0 & $\surd$ \\
-\hline
-\end{tabular}
-\end{sc}
-\end{small}
-\caption{Results for 5 tests of the system.}
-\label{tab:sample-table}
-\end{center}
-\vskip -3mm
+    \vskip 3mm
+    \begin{center}
+    \begin{small}
+    \begin{sc}
+    \begin{tabular}{lcccr}
+    \hline
+    \abovespace\belowspace
+    Test  & Time(mins) & Errors & Success \\
+    \hline
+    \abovespace
+    1    & 0:06 & 0 & $\surd$ \\
+    2    & 0:06 & 0 & $\surd$\\
+    3    & 0:06 & 0 & $\surd$ \\
+    4    & 0:06 & 0 & $\surd$\\
+    5    & 0:06 & 0 & $\surd$ \\
+    \hline
+    \end{tabular}
+    \end{sc}
+    \end{small}
+    \caption{Results for 5 tests on forklift movement with fixed light load.}
+    \label{tab:sample-table}
+    \end{center}
+    \vskip -3mm
 \end{table}
 
-If you need a figure or table to stretch across two columns use the \verb+figure*+ or \verb+table*+ environment instead of the \verb+figure+ or \verb+table+ environment.  Use the \verb+subfigure+ environment if you want to include multiple graphics in a single figure.
+\begin{table}[h]
+    \vskip 3mm
+    \begin{center}
+    \begin{small}
+    \begin{sc}
+    \begin{tabular}{lcccr}
+    \hline
+    \abovespace\belowspace
+    Test  & Time(mins) & Errors & Success \\
+    \hline
+    1    & 0:06 & 0 & $\surd$ \\
+    2    & 0:07 & 0 & $\surd$\\
+    3    & 0:06 & 0 & $\surd$ \\
+    4    & 0:06 & 0 & $\surd$\\
+    5    & 0:06 & 0 & $\surd$\\
+    6    & 0:06 & 0 & $\surd$ \\
+    \hline
+    \end{tabular}
+    \end{sc}
+    \end{small}
+    \caption{Results for 6 tests on app communication with TurtleBot.}
+    \label{tab:sample-table}
+    \end{center}
+    \vskip -3mm
+\end{table}
 
 \section{Budget}
 Each report should contain an actualization of the estimated total budget 
