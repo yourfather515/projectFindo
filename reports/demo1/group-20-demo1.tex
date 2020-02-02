@@ -94,22 +94,6 @@ We are currently using predefined paths to allow us to test that the movement of
 We considered using the ROS navigation stack, however it was proving difficult to implement due to a lack of the control software on DICE and missing libraries on the TurtleBot. 
 Based on this, and the advice of one of the SDP experts we have decided to use our own navigation implementation.
 
-\begin{algorithm}[ht]
-\begin{algorithmic}
-   \STATE {\bfseries Input:} data $x_i$, size $m$
-   \REPEAT
-   \STATE Initialize $noChange = true$.
-   \FOR{$i=1$ {\bfseries to} $m-1$}
-   \IF{$x_i > x_{i+1}$} 
-   \STATE Swap $x_i$ and $x_{i+1}$
-   \STATE $noChange = false$
-   \ENDIF
-   \ENDFOR
-   \UNTIL{$noChange$ is $true$}
-\end{algorithmic}
-  \caption{Bubble Sort}
-  \label{alg:example}
-\end{algorithm}
 
 \section{Evaluation}
 
