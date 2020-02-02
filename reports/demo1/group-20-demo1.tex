@@ -86,14 +86,15 @@ Depending on your system and its stage of development, it could be useful to inc
 
 %If you present algorithms, you can use the \verb+algorithm+ and \verb+algorithmic+ environments to format pseudocode (for instance, Algorithm~\ref{alg:example}). These require the corresponding style files, \verb+algorithm.sty+ and \verb+algorithmic.sty+ which are supplied with this package. 
 
-Turtlebot movement is currently using a method based upon predefined paths which it is able to follow. 
-To ensure that turtlebot is moving the correct distances we are using feedback from the odomoter to determine how far the turtlebot has travelled.
-To gather odomoter feedback we are using the ROS data feeds, as these are already implemented for the turtlebot and fairly accurate.
-We are currently using predefined paths to allow us to test that the movement of the turtlebot is working as expected. In future we expect to be able to generate these paths based on a predefined map and a start and finish location.
+Turtlebot movement is currently using a method based upon predefined paths which it is able to follow.
+We have created a series of functions which can make the turtlebot move in either a straight line for a given distance or rotate by a given angle.
+To ensure that the turtlebot has executed the move correctly we are using odometry data to determine when the move has been completed. 
+To gather odomoter feedback we are using the ROS odom topic, as this has already been implemented for the turtlebot and has so far proved fairly accurate.
+In future we will use the turtlebots measured speed and LIDAR data to increase accuracy.
+We are currently using predefined paths to allow us to test that the movement of the turtlebot is working as expected. In future we expect to be able to generate these paths based on a predefined map, and a given start and finish location.
 
 We considered using the ROS navigation stack, however it was proving difficult to implement due to a lack of the control software on DICE and missing libraries on the TurtleBot. 
 Based on this, and the advice of one of the SDP experts we have decided to use our own navigation implementation.
-
 
 \section{Evaluation}
 
