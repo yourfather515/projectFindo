@@ -26,7 +26,7 @@
 % ]
 
 \begin{abstract} 
-The abstract should consist of one sentence describing the intended functionality of your system, followed by a few sentences (100--200 words) summarising the key advances made for this demo. This should give the reader a clear expectation of what will be demonstrated.
+FInDO is a robot that delivers preselected items to predefined locations around the house and is built for people with limited mobility. For this demo, the hardware team has built a functioning forklift demo out of LEGO as well as put forward plans for the cubby and tray designs. For communication, we can now activate the TurtleBot by pressing a button on an android app. Lastly, the TurtleBot can now execute moves in a preprogrammed order upon being called by the app.
 \end{abstract} 
 
 
@@ -40,7 +40,7 @@ This section should start with your goals:
     \item Tray Design - ??
 \end{itemize}
 
-We have encountered issues with the mapping of the hosue enviroment, this is due to problems we have faced with the SLAM abilities of the turtlebots. 
+We have encountered issues with the mapping of the house environment, this is due to problems we have faced with the SLAM abilities of the TurtleBots. 
 It appears currently that we will not be able to automate the mapping process using ROS, so we are instead going to manually draw up the maps of the demo room.
 The issue with the mapping software is due to the control software requiring a specific version of Ubuntu, which has proved infeasible to run in a virtual machine on DICE.
 
@@ -86,11 +86,11 @@ Depending on your system and its stage of development, it could be useful to inc
 
 %If you present algorithms, you can use the \verb+algorithm+ and \verb+algorithmic+ environments to format pseudocode (for instance, Algorithm~\ref{alg:example}). These require the corresponding style files, \verb+algorithm.sty+ and \verb+algorithmic.sty+ which are supplied with this package. 
 
-Turtlebot movement is currently using a method based upon predefined paths which it is able to follow. 
-To ensure that turtlebot is moving the correct distances we are using feedback from the odomoter to determine how far the turtlebot has travelled.
-To gather odomoter feedback we are using the ROS data feeds, as these are already implemented for the turtlebot and fairly accurate.
+TurtleBot movement is currently using a method based upon predefined paths which it is able to follow. 
+To ensure that TurtleBot is moving the correct distances we are using feedback from the odometer to determine how far the TurtleBot has travelled.
+To gather odometer feedback we are using the ROS data feeds, as these are already implemented for the TurtleBot and fairly accurate.
 
-We considered using the ROS navigation stack, however it was proving difficult to implement due to a lack of the control software on DICE and missing libraries on the turtlebot. 
+We considered using the ROS navigation stack, however it was proving difficult to implement due to a lack of the control software on DICE and missing libraries on the TurtleBot. 
 Based on this, and the advice of one of the SDP experts we have decided to use our own navigation implementation.
 
 \begin{algorithm}[ht]
